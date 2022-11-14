@@ -1,0 +1,27 @@
+.title {
+  display: flex;
+  justify-content: center;
+  background-color: #6BF489;
+  padding: 2rem;
+  margin: 0;
+}
+
+.nav-tabs-container {
+  display: flex;
+  justify-content: space-evenly;
+  // margin-top: 1rem;
+}
+
+.terpenes, .about {
+  padding: 1rem 3rem 1rem 3rem;
+  margin: 0;
+  width: 50%;
+}
+
+.terpenes {
+  background-color: #4995BF;
+}
+
+.about {
+  background-color: #BF499E;
+}

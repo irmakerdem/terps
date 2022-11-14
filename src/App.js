@@ -1,10 +1,15 @@
-import './App.css';
+import React from 'react';
+import NavBar from './Components/NavBar/NavBar';
+import Footer from './Components/Footer/Footer';
+import Routes from './Components/Routes/Routes';
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">Terp App</header>
-    </div>
+    <main className="App">
+      <NavBar />
+      <Routes />
+      <Footer />
+    </main>
   );
 }
 
