@@ -1,9 +1,25 @@
 .title {
   display: flex;
   justify-content: center;
+  background-color: #6BF489;
+  padding: 2rem;
+  margin: 0;
 }
 
 .nav-tabs-container {
   display: flex;
   justify-content: space-evenly;
+}
+
+.terpenes, .about {
+  padding: 1rem 3.13rem 1rem 3.13rem;
+  margin: 0;
+}
+
+.terpenes {
+  background-color: #4995BF;
+}
+
+.about {
+  background-color: #BF499E;
 }
