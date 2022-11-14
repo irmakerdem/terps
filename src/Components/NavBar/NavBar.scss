@@ -4,6 +4,7 @@
   background-color: #6BF489;
   padding: 2rem;
   margin: 0;
+  font-size: 2.5rem;
 }
 
 .nav-tabs-container {
@@ -13,9 +14,12 @@
 }
 
 .terpenes, .about {
-  padding: 1rem 3rem 1rem 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   margin: 0;
   width: 50%;
+  text-align: center;
+  font-size: 2rem;
 }
 
 .terpenes {
