@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  font-size: 1.5rem;
 }
 
 .directions {
@@ -14,4 +15,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.dropdown-values, .button {
+  font-size: 1.5rem;
 }
