@@ -10,12 +10,12 @@ const NavBar = () => {
       </Link>
       <div className='nav-tabs-container'>
         <Link to='/terpenes'>
-          {/* <h2 className='terpenes'>Terpenes</h2>    */}
-          <button className='terpenes'>Terpenes</button>      
+          <h2 className='terpenes'>Terpenes</h2>   
+          {/* <button className='terpenes'>Terpenes</button>       */}
         </Link>
         <Link to='about'>
-          {/* <h2 className='about'>About Us</h2> */}
-          <button className='about'>About Us</button>
+          <h2 className='about'>About Us</h2>
+          {/* <button className='about'>About Us</button> */}
         </Link>
       </div>
     </nav>
