@@ -1,5 +1,6 @@
 import React from 'react';
 import './SearchBar.scss';
+import { Link } from 'react-router-dom';
 
 const SearchBar = () => {
   return (
@@ -8,11 +9,9 @@ const SearchBar = () => {
       <form>
         <input name='search' type='text' placeholder='Search'></input>
       </form>
-      <div>
-        <img></img>
-        <img></img>
-        <img></img>
-      </div>
+      <Link to='/details'>
+        <button className='go'>GO</button>
+      </Link>
     </>
   )
 }
