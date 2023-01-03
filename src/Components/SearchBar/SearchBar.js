@@ -8,6 +8,11 @@ const SearchBar = () => {
       <form>
         <input name='search' type='text' placeholder='Search'></input>
       </form>
+      <div>
+        <img></img>
+        <img></img>
+        <img></img>
+      </div>
     </>
   )
 }
