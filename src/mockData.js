@@ -1,21 +1,21 @@
 const mockData = [
   {
     "id": 1,
-    "name": "Gelato",
+    "strain": "Gelato",
     "terpenes": ["linalool, limonene"],
     "effects": ["calm"],
     "similar strains": ["Purple Punch"]
   },
   {
     "id": 2,
-    "name": "Sour Diesel",
+    "strain": "Sour Diesel",
     "terpenes": ["linalool, humulene, camphene"],
     "effects": ["euphoric", "focus", "cerebral"],
     "similar strains": ["Skywalker OG", "Gelatti Cake"]
   },
   {
     "id": 3,
-    "name": "Kush Envy",
+    "strain": "Kush Envy",
     "terpenes": ["limonene"],
     "effects": ["anti-inflammatory", "uplifting"],
     "similar strains": ["Wedding Cake", "Crescendo"]
