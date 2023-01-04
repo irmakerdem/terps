@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 // import mockData from './../../mockData';
 
 const SearchBar = () => {
-
   const [myStrain, setMyStrain] = useState("");
 
   const data = [
@@ -31,30 +30,32 @@ const SearchBar = () => {
     },
   ]
 
-  const getInputValue = () => {
-    
+  const getInputValue = (event) => {
+    //event is the click in search bar
+    setMyStrain(event.target.value) 
+    // console.log(event.target.value)
+    return event.target.value
   }
 
-  const searchStrain = (name) => {
-    console.log(name)
+  const searchStrain = () => {
+    // console.log(myStrain)
     data.find((mock) => {
       console.log(mock)
-      if (name === mock.strain) {
-        console.log(mock.strain)
+      if (myStrain === mock.strain) {
+        console.log(mock.effects)
         return mock
       }
-    }
-    )
+    })
   }
 
   return (
     <>
       <h3 className='directions'>Search your favorite cultivar to view cultivars of similar terpene profiles.</h3>
       <form>
-        <input name='search' type='text' placeholder='Search'></input>
+        <input name='search' type='text' placeholder='Search' onChange={ (event) => getInputValue(event) }></input>
       </form>
       <Link to='/details'>
-        <button className='go' onClick={() => searchStrain(myStrain)}>GO</button>
+        <button className='go' onClick={() => searchStrain()}>GO</button>
       </Link>
     </>
   )
