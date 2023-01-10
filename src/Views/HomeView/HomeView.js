@@ -4,13 +4,13 @@ import SearchBar from '../../Components/SearchBar/SearchBar';
 import trichomes from './../../assets/trichome-logo.png';
 import './HomeView.scss';
 
-const HomeView = () => {
+const HomeView = ( {searchStrain} ) => {
 
   return (
     <div className='homeview-container'>
       <img src={trichomes} alt='trichomes illustration' className='trichomes'></img>
       {/* <Dropdown /> */}
-      <SearchBar />
+      <SearchBar searchStrain={searchStrain}/>
     </div>
   )
 }

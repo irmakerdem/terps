@@ -5,7 +5,8 @@ import AboutView from '../../Views/AboutView/AboutView';
 import TerpenesView from '../../Views/TerpenesView/TerpenesView';
 import DetailsView from '../../Views/DetailsView/DetailsView';
 
-const Routes = () => {
+const Routes = ( { searchStrain, matchingStrain } ) => {
+  console.log(matchingStrain)
   return (
     <Switch>
       <Route exact path='/about'>
@@ -15,10 +16,10 @@ const Routes = () => {
         <TerpenesView />
       </Route>
       <Route exact path='/details'>
-        <DetailsView />
+        <DetailsView matchingStrain={matchingStrain}/>
       </Route>
       <Route exact path='/'>
-        <HomeView />
+        <HomeView searchStrain={searchStrain} />
       </Route>
     </Switch>
   )

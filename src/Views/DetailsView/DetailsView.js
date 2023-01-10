@@ -1,14 +1,15 @@
 import React from 'react';
 import './DetailsView.scss';
 
-const DetailsView = () => {
+const DetailsView = ( {matchingStrain} ) => {
+  console.log(matchingStrain)
   return (
     <div className='details-container'>
-      <p>OG Kush</p>
-      {/* <p>Terpenes: {data.terpenes}</p> */}
-      <p>Terpenes:</p>
-      <p>Effects:</p>
-      <p>Similar Strains:</p>
+      <p>STRAIN NAME</p>
+      <p>{matchingStrain.strain}</p>
+      <p>Terpenes: {matchingStrain.terpenes}</p>
+      <p>Effects: {matchingStrain.effects}</p>
+      <p>Similar Strain(s): {matchingStrain.similar}</p>
     </div>
   )
 }
