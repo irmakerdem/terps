@@ -15,7 +15,7 @@ const mockData = [
   },
   {
     'id': 3,
-    'strain': 'Kush Envy',
+    'strain': 'Kush Enge',
     'terpenes': ['limonene'],
     'effects': ['anti-inflammatory', 'uplifting'],
     'similar': ['Wedding Cake', 'Crescendo']

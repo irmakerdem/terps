@@ -6,7 +6,7 @@ import mockData from './mockData';
 
 const App = () => {
 
-  const [matchingStrain, setMatchingStrain] = useState({});
+  const [matchingStrain, setMatchingStrain] = useState([]);
 
   // const searchStrain = (inputStrain) => {
   //   // console.log(inputStrain)
@@ -26,19 +26,19 @@ const App = () => {
 
   const searchStrain = (inputStrain) => {
     // console.log(inputStrain)
-    let foundStrain = mockData.find((mock) => {
-      // console.log(mock)
+    let foundStrain = mockData.filter((mock) => {
+      // console.log("MOCKKKK", mock)
       let name = mock.strain.toLowerCase()
       if (name.includes(inputStrain.toLowerCase())) {
-        console.log(mock.effects)
-        console.log(matchingStrain)
+        // console.log("my mock", mock)
         return mock
       }
     })
-    // console.log(mock)
+    //foundStrain is an array!!!
+    // console.log(foundStrain)
     setMatchingStrain(foundStrain)
-    console.log(matchingStrain)
-    // return matchingStrain
+    //matchingStrain is an object!!
+    // console.log(matchingStrain)
   }
 
   return (

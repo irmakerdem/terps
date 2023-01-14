@@ -10,7 +10,7 @@ const SearchBar = ( {searchStrain} ) => {
   const getInputValue = (event) => {
     //event is the click in search bar
     setInputStrain(event.target.value)
-    console.log(inputStrain)
+    // console.log(inputStrain)
     //what we tyoed get's svaed as state
     // searchStrain(event.target.value)
   }

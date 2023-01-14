@@ -6,7 +6,7 @@ import TerpenesView from '../../Views/TerpenesView/TerpenesView';
 import DetailsView from '../../Views/DetailsView/DetailsView';
 
 const Routes = ( { searchStrain, matchingStrain } ) => {
-  console.log(matchingStrain)
+  // console.log(matchingStrain)
   return (
     <Switch>
       <Route exact path='/about'>
