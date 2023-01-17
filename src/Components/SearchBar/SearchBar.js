@@ -38,7 +38,7 @@ const SearchBar = ( {searchStrain} ) => {
       <form>
         <input name='search' type='text' placeholder='Search' onChange={ (event) => getInputValue(event) }></input>
       </form>
-      <Link to='/details' className='fake-button'>
+      <Link to='/searchresults' className='fake-button'>
         <button className='go' onClick={() => {searchStrain(inputStrain)}}>GO</button>
       </Link>
     </>
