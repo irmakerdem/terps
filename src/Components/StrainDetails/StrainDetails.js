@@ -1,9 +1,10 @@
 import React from 'react';
-import './StrainCard.scss';
+import './StrainDetails.scss';
 
-const StrainCard = ( {matchingStrain} ) => {
+const StrainDetails = ( {matchingStrain} ) => {
   return (
       <div className='details-container'>
+        <img></img>
         <h1>{str.strain}</h1>
         <p>Terpenes: {str.terpenes}</p>
         <p>Effects: {str.effects}</p>
@@ -12,4 +13,4 @@ const StrainCard = ( {matchingStrain} ) => {
   )
   }
 
-export default StrainCard;
+export default StrainDetails;

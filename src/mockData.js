@@ -22,7 +22,14 @@ const mockData = [
   },
   {
     'id': 4,
-    'strain': 'Gelato Orange',
+    'strain': 'Gelato Orange 1',
+    'terpenes': ['linalool, limonene'],
+    'effects': ['calm'],
+    'similar': ['Purple Punch']
+  },
+  {
+    'id': 5,
+    'strain': 'Gelato Orange 2',
     'terpenes': ['linalool, limonene'],
     'effects': ['calm'],
     'similar': ['Purple Punch']
