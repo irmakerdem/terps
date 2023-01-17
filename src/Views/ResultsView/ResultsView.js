@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import SearchResult from '../../Components/SearchResult/SearchResult';
 import './ResultsView.scss';
 
-const ResultsView = ( {matchingStrain} ) => {
-  return matchingStrain.map(str => {
+const ResultsView = ( {matchingStrains} ) => {
+  return matchingStrains.map(str => {
     return (
-      <Link to='/details' key={str.id}>
+      <Link to={`/${str.strain}`} key={str.id}>
         <SearchResult 
           str={str}
           key={str.id}

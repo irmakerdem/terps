@@ -6,8 +6,8 @@ import TerpenesView from '../../Views/TerpenesView/TerpenesView';
 import ResultsView from '../../Views/ResultsView/ResultsView';
 import StrainDetails from '../StrainDetails/StrainDetails';
 
-const Routes = ( { searchStrain, matchingStrain } ) => {
-  // console.log(matchingStrain)
+const Routes = ( { searchStrain, matchingStrains, selectResult } ) => {
+  // console.log(matchingStrains)
   return (
     <Switch>
       <Route exact path='/about'>
@@ -16,12 +16,16 @@ const Routes = ( { searchStrain, matchingStrain } ) => {
       <Route exact path='/terpenes'>
         <TerpenesView />
       </Route>
-      <Route exact path='/searchresults'>
-        <ResultsView matchingStrain={matchingStrain}/>
+      <Route exact path='/searchResults'>
+        <ResultsView matchingStrains={matchingStrains}/>
       </Route>
-      <Route exact path='/details'>
-        <StrainDetails />
-      </Route>
+      <Route exact path='/:strainName' render={({match}) => {
+        // console.log(match)
+        let selectedStrain = selectResult(match.params)
+        return <StrainDetails selectedStrain={selectedStrain} />
+          }
+        }
+      />
       <Route exact path='/'>
         <HomeView searchStrain={searchStrain} />
       </Route>

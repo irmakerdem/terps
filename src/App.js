@@ -6,7 +6,7 @@ import mockData from './mockData';
 
 const App = () => {
 
-  const [matchingStrain, setMatchingStrain] = useState([]);
+  const [matchingStrains, setmatchingStrains] = useState([]);
 
   // const searchStrain = (inputStrain) => {
   //   // console.log(inputStrain)
@@ -14,14 +14,14 @@ const App = () => {
   //     // console.log(mock)
   //     if (inputStrain === mock.strain) {
   //       console.log(mock.effects)
-  //       console.log(matchingStrain)
+  //       console.log(matchingStrains)
   //       return mock
   //     }
   //   })
   //   // console.log(mock)
-  //   setMatchingStrain(foundStrain)
-  //   console.log(matchingStrain)
-  //   // return matchingStrain
+  //   setmatchingStrains(foundStrain)
+  //   console.log(matchingStrains)
+  //   // return matchingStrains
   // }
 
   const searchStrain = (inputStrain) => {
@@ -34,17 +34,17 @@ const App = () => {
         return mock
       }
     })
-    //foundStrain is an array!!!
-    // console.log(foundStrain)
-    setMatchingStrain(foundStrain)
-    //matchingStrain is an object!!
-    // console.log(matchingStrain)
+    setmatchingStrains(foundStrain)
+  }
+
+  const selectResult = (matchedStrain) => {
+    return matchingStrains.find(st => st.strain === matchedStrain.strainName)
   }
 
   return (
     <main className='App'>
       <NavBar />
-      <Routes searchStrain={searchStrain} matchingStrain={matchingStrain}/>
+      <Routes searchStrain={searchStrain} matchingStrains={matchingStrains} selectResult={selectResult}/>
       <Footer />
     </main>
   );
