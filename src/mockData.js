@@ -2,14 +2,14 @@ const mockData = [
   {
     'id': 1,
     'strain': 'Gelato',
-    'terpenes': ['linalool, limonene'],
+    'terpenes': ['linalool', 'limonene'],
     'effects': ['calm'],
     'similar': ['Purple Punch']
   },
   {
     'id': 2,
     'strain': 'Sour Diesel',
-    'terpenes': ['linalool, humulene, camphene'],
+    'terpenes': ['linalool', 'humulene', 'camphene'],
     'effects': ['euphoric', 'focus', 'cerebral'],
     'similar': ['Skywalker OG', 'Gelatti Cake']
   },
@@ -23,14 +23,14 @@ const mockData = [
   {
     'id': 4,
     'strain': 'Gelato Orange 1',
-    'terpenes': ['linalool, limonene'],
+    'terpenes': ['limonene', 'pinene'],
     'effects': ['calm'],
     'similar': ['Purple Punch']
   },
   {
     'id': 5,
     'strain': 'Gelato Orange 2',
-    'terpenes': ['linalool, limonene'],
+    'terpenes': ['linalool'],
     'effects': ['calm'],
     'similar': ['Purple Punch']
   },
