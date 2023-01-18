@@ -4,7 +4,7 @@ import './SearchResult.scss';
 const SearchResult = ( {str} ) => {
   return (
       <div className='result'>
-        <h1>{str.strain}</h1>
+        <h3>{str.strain}</h3>
       </div>
   )
 }
