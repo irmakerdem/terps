@@ -3,9 +3,9 @@ import './SearchResult.scss';
 
 const SearchResult = ( {str} ) => {
   return (
-      <div className='result'>
-        <h3>{str.strain}</h3>
-      </div>
+    <div className='result'>
+      <h2>{str.strain}</h2>
+    </div>
   )
 }
 

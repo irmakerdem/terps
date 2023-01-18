@@ -16,7 +16,7 @@ const ResultsView = ( {matchingStrains} ) => {
   })
   return (
     <>
-      <h2>Your Search Results:</h2>
+      <h1 className='headline'>Your Search Results:</h1>
       {cultivars}
     </>
     )
