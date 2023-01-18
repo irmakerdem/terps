@@ -6,12 +6,15 @@ import './ResultsView.scss';
 const ResultsView = ( {matchingStrains} ) => {
   return matchingStrains.map(str => {
     return (
-      <Link to={`/${str.strain}`} key={str.id}>
-        <SearchResult 
-          str={str}
-          key={str.id}
-        />
-      </Link>
+      <>
+        <p>Your search results:</p>
+        <Link to={`/${str.strain}`} key={str.id}>
+          <SearchResult 
+            str={str}
+            key={str.id}
+          />
+        </Link>
+      </>
     )
   })
 }
