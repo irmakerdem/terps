@@ -3,8 +3,11 @@ import { Route, Switch } from 'react-router-dom';
 import HomeView from '../../Views/HomeView/HomeView';
 import AboutView from '../../Views/AboutView/AboutView';
 import TerpenesView from '../../Views/TerpenesView/TerpenesView';
+import ResultsView from '../../Views/ResultsView/ResultsView';
+import StrainDetails from '../StrainDetails/StrainDetails';
 
-const Routes = () => {
+const Routes = ( { searchStrain, matchingStrains, selectResult } ) => {
+  // console.log(matchingStrains)
   return (
     <Switch>
       <Route exact path='/about'>
@@ -13,8 +16,18 @@ const Routes = () => {
       <Route exact path='/terpenes'>
         <TerpenesView />
       </Route>
+      <Route exact path='/searchResults'>
+        <ResultsView matchingStrains={matchingStrains}/>
+      </Route>
+      <Route exact path='/:strainName' render={({match}) => {
+        // console.log(match)
+        let selectedStrain = selectResult(match.params)
+        return <StrainDetails selectedStrain={selectedStrain} />
+          }
+        }
+      />
       <Route exact path='/'>
-        <HomeView />
+        <HomeView searchStrain={searchStrain} />
       </Route>
     </Switch>
   )

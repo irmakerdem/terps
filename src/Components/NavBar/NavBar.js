@@ -12,7 +12,7 @@ const NavBar = () => {
         <Link to='/terpenes'>
           <button className='terpenes'>Terpenes</button>      
         </Link>
-        <Link to='about'>
+        <Link to='/about'>
           <button className='about'>About Us</button>
         </Link>
       </div>
