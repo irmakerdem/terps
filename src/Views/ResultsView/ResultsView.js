@@ -5,9 +5,10 @@ import './ResultsView.scss';
 
 const ResultsView = ( {matchingStrains} ) => {
   let cultivars = matchingStrains.map(str => {
+    // console.log(str)
     return (
       <Link to={`/${str.strain}`} key={str.id}>
-        <SearchResult 
+        <SearchResult
           str={str}
           key={str.id}
         />

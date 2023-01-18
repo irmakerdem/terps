@@ -15,7 +15,7 @@ const mockData = [
   },
   {
     'id': 3,
-    'strain': 'Kush Enge',
+    'strain': 'Kush Envy',
     'terpenes': ['limonene'],
     'effects': ['anti-inflammatory', 'uplifting'],
     'similar': ['Wedding Cake', 'Crescendo']
@@ -31,6 +31,41 @@ const mockData = [
     'id': 5,
     'strain': 'Gelato Orange 2',
     'terpenes': ['linalool'],
+    'effects': ['calm'],
+    'similar': ['Purple Punch']
+  },
+  {
+    'id': 6,
+    'strain': 'Purple Punch',
+    'terpenes': ['linalool', 'limonene'],
+    'effects': ['calm'],
+    'similar': ['Kush Envy']
+  },
+  {
+    'id': 7,
+    'strain': 'Skywalker OG',
+    'terpenes': ['linalool', 'limonene'],
+    'effects': ['calm'],
+    'similar': ['Wedding Cake']
+  },
+  {
+    'id': 8,
+    'strain': 'Gelatti Cake',
+    'terpenes': ['linalool', 'limonene'],
+    'effects': ['calm'],
+    'similar': ['Purple Punch']
+  },
+  {
+    'id': 9,
+    'strain': 'Wedding Cake',
+    'terpenes': ['linalool', 'limonene'],
+    'effects': ['calm'],
+    'similar': ['Sour Diesel']
+  },
+  {
+    'id': 10,
+    'strain': 'Crescendo',
+    'terpenes': ['linalool', 'limonene'],
     'effects': ['calm'],
     'similar': ['Purple Punch']
   },
