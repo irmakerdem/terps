@@ -18,8 +18,7 @@ const StrainDetails = ( {selectedStrain, searchStrain} ) => {
         <p className='spacing'>Effects:</p>
           <ul>{effList}</ul>
         <p className='spacing'>Similar Strain(s):</p>
-            {console.log(simList)}
-            <ul>{simList}</ul>
+          <ul>{simList}</ul>
       </div>
     </div>
   )
