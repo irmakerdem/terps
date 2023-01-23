@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './SearchBar.scss';
 import { Link } from 'react-router-dom';
-// import mockData from './../../mockData';
 
 const SearchBar = ( {searchStrain} ) => {
   const [inputStrain, setInputStrain] = useState('');

@@ -2,21 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './StrainDetails.scss';
 
-const StrainDetails = ( {selectedStrain} ) => {
-  // const effList = selectedStrain.effects.join(', ')
+const StrainDetails = ( {selectedStrain, searchStrain} ) => {
   const terpList = selectedStrain.terpenes.map((terp) => <li key={terp}>{terp}</li>);
   const effList = selectedStrain.effects.map((eff) => <li key={eff}>{eff}</li>);
   const simList = selectedStrain.similar.map((cult) => {
-    // console.log(cult)
-    //cult is string
-    return <li key={cult}>{cult}</li>
+    return <Link to={`/${cult}`} onClick={() => {searchStrain(cult)}} key={cult}><li key={cult}>{cult}</li></Link>
   })
-  // console.log(simList)
-  //simlist is array (but also object?)
-  
-//currently when i search sour and click ONE similar strain, 
-//both similar strain names appear in the URL meaning Link to is not set properly
-//page also breaks
 
   return (
     <div className='details-container'>
@@ -27,9 +18,7 @@ const StrainDetails = ( {selectedStrain} ) => {
         <p className='spacing'>Effects:</p>
           <ul>{effList}</ul>
         <p className='spacing'>Similar Strain(s):</p>
-          <Link to={`/${selectedStrain.similar}`}>
-            <ul>{simList}</ul>
-          </Link>
+          <ul>{simList}</ul>
       </div>
     </div>
   )
