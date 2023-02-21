@@ -8,16 +8,8 @@ const App = () => {
 
   const [matchingStrains, setmatchingStrains] = useState([]);
 
-  // const handleEnter = (event) => {
-  //   console.log(event)
-  //   event.preventDefault();
-  // }
-
   const searchStrain = (inputStrain) => {
-    // console.log(event)
-    // event.preventDefault();
     // console.log(inputStrain)
-    // handleEnter();
     let foundStrain = mockData.filter((mock) => {
       // console.log("MOCKKKK", mock)
       let name = mock.strain.toLowerCase()
