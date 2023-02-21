@@ -8,22 +8,6 @@ const App = () => {
 
   const [matchingStrains, setmatchingStrains] = useState([]);
 
-  // const searchStrain = (inputStrain) => {
-  //   // console.log(inputStrain)
-  //   let foundStrain = mockData.find((mock) => {
-  //     // console.log(mock)
-  //     if (inputStrain === mock.strain) {
-  //       console.log(mock.effects)
-  //       console.log(matchingStrains)
-  //       return mock
-  //     }
-  //   })
-  //   // console.log(mock)
-  //   setmatchingStrains(foundStrain)
-  //   console.log(matchingStrains)
-  //   // return matchingStrains
-  // }
-
   const searchStrain = (inputStrain) => {
     // console.log(inputStrain)
     let foundStrain = mockData.filter((mock) => {

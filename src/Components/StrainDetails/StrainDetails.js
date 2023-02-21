@@ -6,7 +6,7 @@ const StrainDetails = ( {selectedStrain, searchStrain} ) => {
   const terpList = selectedStrain.terpenes.map((terp) => <li key={terp}>{terp}</li>);
   const effList = selectedStrain.effects.map((eff) => <li key={eff}>{eff}</li>);
   const simList = selectedStrain.similar.map((cult) => {
-    return <Link to={`/${cult}`} onClick={() => {searchStrain(cult)}} key={cult}><li key={cult}>{cult}</li></Link>
+    return <Link to={`/${cult}`} onClick={() => {searchStrain(cult)}} key={cult}><li>{cult}</li></Link>
   })
 
   return (
