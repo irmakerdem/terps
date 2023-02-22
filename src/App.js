@@ -10,12 +10,17 @@ const App = () => {
 
   const searchStrain = (inputStrain) => {
     // console.log(inputStrain)
+    // if(!inputStrain) {
+    //   alert("Please enter a strain name! 🌱")
+    // }
     let foundStrain = mockData.filter((mock) => {
       // console.log("MOCKKKK", mock)
-      let name = mock.strain.toLowerCase()
+      let name = mock.strain.toLowerCase();
       if (name.includes(inputStrain.toLowerCase())) {
         // console.log("my mock", mock)
-        return mock
+        return mock;
+      } else {
+        return null;
       }
     })
     setmatchingStrains(foundStrain)
