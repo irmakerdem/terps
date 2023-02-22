@@ -27,7 +27,10 @@ const App = () => {
       }
     })
     console.log("foundStrains ➡️", foundStrains)
-    setMatchingStrains(foundStrains)
+    let sortedArr = foundStrains.sort((a, b) => {
+      return a.strain.localeCompare(b.strain)
+    })
+    setMatchingStrains(sortedArr)
   }
 
   const selectResult = (singleStrain) => {
