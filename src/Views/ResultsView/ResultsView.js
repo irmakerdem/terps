@@ -4,8 +4,10 @@ import SearchResult from '../../Components/SearchResult/SearchResult';
 import './ResultsView.scss';
 
 const ResultsView = ( {matchingStrains} ) => {
+  // let cleanName = name.replace(/\s+/g, '-');
+
   let cultivars = matchingStrains.map(str => {
-    // console.log(str)
+    console.log(str)
     return (
       <Link to={`/${str.strain}`} key={str.id}>
         <SearchResult

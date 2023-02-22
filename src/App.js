@@ -6,28 +6,34 @@ import mockData from './mockData';
 
 const App = () => {
 
-  const [matchingStrains, setmatchingStrains] = useState([]);
+  const [matchingStrains, setMatchingStrains] = useState([]);
 
-  const searchStrain = (inputStrain) => {
-    // console.log(inputStrain)
-    // if(!inputStrain) {
+  const searchStrain = (input) => {
+    // console.log("input ➡️", input)
+    // if(!input) {
     //   alert("Please enter a strain name! 🌱")
+    //   input = 'strain is empty!'
+    //   return
     // }
-    let foundStrain = mockData.filter((mock) => {
-      // console.log("MOCKKKK", mock)
+    let foundStrains = mockData.filter((mock) => {
+      // console.log("MOCKKKK➡️", mock)
       let name = mock.strain.toLowerCase();
-      if (name.includes(inputStrain.toLowerCase())) {
-        // console.log("my mock", mock)
+      // console.log("name ➡️", name)
+      if (name.includes(input.toLowerCase())) {
+        console.log("my mock➡️", mock)
         return mock;
       } else {
         return null;
       }
     })
-    setmatchingStrains(foundStrain)
+    console.log("foundStrains ➡️", foundStrains)
+    setMatchingStrains(foundStrains)
   }
 
-  const selectResult = (matchedStrain) => {
-    return matchingStrains.find(st => st.strain === matchedStrain.strainName)
+  const selectResult = (singleStrain) => {
+    console.log("matchingStrains ➡️", matchingStrains)
+    console.log("singleStrain ➡️", singleStrain)
+    return matchingStrains.find(st => st.strain === singleStrain.strainName)
   }
 
   return (

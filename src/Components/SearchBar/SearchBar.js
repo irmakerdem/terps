@@ -17,7 +17,7 @@ const SearchBar = ( {searchStrain} ) => {
       <form>
         <input name='search' type='text' placeholder='Search' required onChange={(event) => getInputValue(event)}></input>
         <Link to='/searchResults' className='fake-button'>
-          <button type='submit' className='go' onClick={() => {searchStrain(inputStrain)}}>GO</button>
+          <button disabled={!inputStrain.length} type='submit' className='go' onClick={() => {searchStrain(inputStrain)}}>GO</button>
         </Link>
       </form>
     </>

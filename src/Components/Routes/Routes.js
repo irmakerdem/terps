@@ -20,7 +20,7 @@ const Routes = ( { searchStrain, matchingStrains, selectResult } ) => {
         <ResultsView matchingStrains={matchingStrains}/>
       </Route>
       <Route exact path='/:strainName' render={({match}) => {
-        // console.log(match)
+        console.log("match on route ➡️", match)
         let selectedStrain = selectResult(match.params)
         return <StrainDetails selectedStrain={selectedStrain} searchStrain={searchStrain} />
           }
