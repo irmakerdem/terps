@@ -36,13 +36,16 @@ const App = () => {
   const selectResult = (singleStrain) => {
     console.log("matchingStrains ➡️", matchingStrains)
     console.log("singleStrain ➡️", singleStrain)
-    return matchingStrains.find(st => st.strain === singleStrain.strainName)
+    return matchingStrains.find(st => {
+      return st.strain.replace(/ /g, "") === singleStrain.strainName
+    })
+
   }
 
   return (
     <main className='App'>
       <NavBar />
-      <Routes searchStrain={searchStrain} matchingStrains={matchingStrains} selectResult={selectResult}/>
+      <Routes searchStrain={searchStrain} matchingStrains={matchingStrains} selectResult={selectResult} />
       <Footer />
     </main>
   );

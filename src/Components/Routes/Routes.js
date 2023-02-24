@@ -7,7 +7,6 @@ import ResultsView from '../../Views/ResultsView/ResultsView';
 import StrainDetails from '../StrainDetails/StrainDetails';
 
 const Routes = ( { searchStrain, matchingStrains, selectResult } ) => {
-  // console.log(matchingStrains)
   return (
     <Switch>
       <Route exact path='/about'>
@@ -22,9 +21,10 @@ const Routes = ( { searchStrain, matchingStrains, selectResult } ) => {
       <Route exact path='/:strainName' render={({match}) => {
         console.log("match on route ➡️", match)
         let selectedStrain = selectResult(match.params)
+        console.log(selectedStrain)
         return <StrainDetails selectedStrain={selectedStrain} searchStrain={searchStrain} />
-          }
         }
+      }
       />
       <Route exact path='/'>
         <HomeView searchStrain={searchStrain} />
