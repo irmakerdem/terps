@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import './StrainDetails.scss';
 
 const StrainDetails = ( {selectedStrain, searchStrain} ) => {
+
+  console.log(selectedStrain)
   const terpList = selectedStrain.terpenes.map((terp) => <li key={terp}>{terp}</li>);
   const effList = selectedStrain.effects.map((eff) => <li key={eff}>{eff}</li>);
   const simList = selectedStrain.similar.map((cult) => {
-    return <Link to={`/${cult}`} onClick={() => {searchStrain(cult)}} key={cult}><li>{cult}</li></Link>
+    return <Link to={`/${cult}`.replace(/\s/g, '')} onClick={() => {searchStrain(cult)}} key={cult}><li>{cult}</li></Link>
   })
 
   return (
@@ -14,7 +16,7 @@ const StrainDetails = ( {selectedStrain, searchStrain} ) => {
       <h1 className='strain-name'>{selectedStrain.strain}</h1>
       <div className='strain-details'>
         <p className='spacing'>Terpenes:</p>
-        <ul>{terpList}</ul>
+          <ul>{terpList}</ul>
         <p className='spacing'>Effects:</p>
           <ul>{effList}</ul>
         <p className='spacing'>Similar Strain(s):</p>
