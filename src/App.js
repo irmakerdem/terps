@@ -2,32 +2,34 @@ import React, {useState, useEffect} from 'react';
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer';
 import Routes from './Components/Routes/Routes';
-import mockData from './mockData';
+// import mockData from './mockData';
 import { getAllStrains } from './apiCalls';
 
 const App = () => {
 
   const [matchingStrains, setMatchingStrains] = useState([]);
+  const [allStrains, setAllStrains] = useState([]);
 
   useEffect(() => {
     getAllStrains()
     .then(responseee => {
       console.log(responseee.data.data)
-      setMatchingStrains(responseee.data.data)
+      // setMatchingStrains(responseee.data.data)
+      setAllStrains(responseee.data.data)
     })
     .catch(err => console.log(err))
   }, [])
 
   const searchStrain = (input) => {
-    // console.log("input ➡️", input)
-    console.log(matchingStrains)
-    let foundStrains = matchingStrains.filter((mock) => {
-      // console.log("MOCKKKK➡️", mock)
-      let name = mock.attributes.name.toLowerCase();
-      // console.log("name ➡️", name)
+    console.log("input ➡️", input)
+    console.log(allStrains)
+    let foundStrains = allStrains.filter((strain) => {
+      console.log(strain)
+      let name = strain.attributes.name.toLowerCase();
+      console.log(name)
       if (name.includes(input.toLowerCase())) {
-        console.log("my mock➡️", mock)
-        return mock;
+        console.log(strain)
+        return strain;
       } else {
         return null;
       }
@@ -62,7 +64,7 @@ const App = () => {
 
   const selectResult = (singleStrain) => {
     // console.log("matchingStrains ➡️", matchingStrains)
-    // console.log("singleStrain ➡️", singleStrain)
+    console.log("singleStrain ➡️", singleStrain)
     return matchingStrains.find(st => {
       return st.attributes.name.replace(/ /g, "") === singleStrain.strainName
     })
@@ -73,7 +75,7 @@ const App = () => {
     <main className='App'>
       {console.log("matchingStrains", matchingStrains)}
       <NavBar />
-      <Routes searchStrain={searchStrain} matchingStrains={matchingStrains} selectResult={selectResult} />
+      <Routes allStrains ={allStrains} searchStrain={searchStrain} matchingStrains={matchingStrains} selectResult={selectResult} />
       <Footer />
     </main>
   );
