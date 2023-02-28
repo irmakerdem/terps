@@ -4,7 +4,7 @@ import './StrainDetails.scss';
 
 const StrainDetails = ( {selectedStrain, searchStrain} ) => {
 
-  console.log(selectedStrain.attributes.product_terpenes)
+  console.log(selectedStrain)
   const terpList = selectedStrain.attributes.product_terpenes.map((terp) => <li key={terp.terpene.data.id}>{terp.terpene.data.attributes.name}</li>);
   const effList = selectedStrain.attributes.effects.data.map((eff) => <li key={eff.id}>{eff.attributes.name}</li>);
   // const simList = selectedStrain.similar.map((cult) => {
@@ -14,7 +14,8 @@ const StrainDetails = ( {selectedStrain, searchStrain} ) => {
 
   return (
     <div className='details-container'>
-      <h1 className='strain-name'>{selectedStrain.strain}</h1>
+      <h1 className='strain-name'>{selectedStrain.attributes.name}</h1>
+      <h3 className='strain-name'>{selectedStrain.attributes.description}</h3>
       <div className='strain-details'>
         <p className='spacing'>Terpenes:</p>
           <ul>{terpList}</ul>
@@ -22,8 +23,8 @@ const StrainDetails = ( {selectedStrain, searchStrain} ) => {
           <ul>{effList}</ul>
         <p className='spacing'>Cannabinoids (%):</p>
           <ul>{cannabList}</ul>
-        {/* <p className='spacing'>Similar Strain(s):</p>
-          <ul>{simList}</ul> */}
+        <p className='spacing'>Similar Strain(s):</p>
+          {/* <ul>{simList}</ul> */}
       </div>
     </div>
   )
