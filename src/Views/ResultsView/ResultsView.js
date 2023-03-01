@@ -9,7 +9,7 @@ const ResultsView = ( {matchingStrains} ) => {
   let cultivars = matchingStrains.map(str => {
     // console.log(str)
     return (
-      <Link to={`/${str.strain}`.replace(/\s/g, '')} key={str.id}>
+      <Link to={`/${str.attributes.name}`.replace(/\s/g, '')} key={str.id}>
         <SearchResult
           str={str}
           key={str.id}
