@@ -13,22 +13,21 @@ const App = () => {
   useEffect(() => {
     getAllStrains()
     .then(responseee => {
-      console.log(responseee.data.data)
-      // setMatchingStrains(responseee.data.data)
+      // console.log(responseee)
       setAllStrains(responseee.data.data)
     })
     .catch(err => console.log(err))
   }, [])
 
   const searchStrain = (input) => {
-    console.log("input ➡️", input)
-    console.log(allStrains)
+    // console.log("input ➡️", input)
+    // console.log(allStrains)
     let foundStrains = allStrains.filter((strain) => {
-      console.log(strain)
+      // console.log(strain)
       let name = strain.attributes.name.toLowerCase();
-      console.log(name)
+      // console.log(name)
       if (name.includes(input.toLowerCase())) {
-        console.log(strain)
+        // console.log(strain)
         return strain;
       } else {
         return null;
@@ -64,7 +63,7 @@ const App = () => {
 
   const selectResult = (singleStrain) => {
     // console.log("matchingStrains ➡️", matchingStrains)
-    console.log("singleStrain ➡️", singleStrain)
+    // console.log("singleStrain ➡️", singleStrain)
     return matchingStrains.find(st => {
       return st.attributes.name.replace(/ /g, "") === singleStrain.strainName
     })
@@ -73,7 +72,7 @@ const App = () => {
 
   return (
     <main className='App'>
-      {console.log("matchingStrains", matchingStrains)}
+      {/* {console.log("matchingStrains", matchingStrains)} */}
       <NavBar />
       <Routes allStrains ={allStrains} searchStrain={searchStrain} matchingStrains={matchingStrains} selectResult={selectResult} />
       <Footer />
