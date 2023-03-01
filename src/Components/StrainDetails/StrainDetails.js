@@ -18,21 +18,20 @@ const StrainDetails = ( {selectedStrain, searchStrain, allStrains} ) => {
   return (
     <div className='details-container'>
       <h1 className='strain-name'>{selectedStrain.attributes.name}</h1>
-      <h3 className='strain-name'>{selectedStrain.attributes.description}</h3>
+      <h3 className='strain-desc'>{selectedStrain.attributes.description}</h3>
       <div className='strain-details'>
-        <p className='spacing'>Terpenes:</p>
+        <p className='spacing'><b>Terpenes:</b></p>
           <ul>{terpList}</ul>
-        <p className='spacing'>Effects:</p>
+        <p className='spacing'><b>Effects:</b></p>
           <ul>{effList}</ul>
-        <p className='spacing'>Cannabinoids (%):</p>
+        <p className='spacing'><b>Cannabinoids (%):</b></p>
           <ul>{cannabList}</ul>
-        <p className='spacing'>Similar Strain(s):</p>
-          {/* <ul>{simList}</ul> */}
-          <ul>{simList}</ul>
-        <p className='spacing'>Aromas:</p>
+        <p className='spacing'><b>Aromas:</b></p>
           <ul>{aromaList}</ul> 
-        <p className='spacing'>Flavors:</p>
+        <p className='spacing'><b>Flavors:</b></p>
           <ul>{flavList}</ul>  
+        <p className='spacing'><b>Similar Strain(s):</b></p>
+          <ul>{simList}</ul>
       </div>
     </div>
   )
